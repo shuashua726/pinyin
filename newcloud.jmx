@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="data_version" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1.0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">data_version</stringProp>
+              </elementProp>
+              <elementProp name="client_data" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">GBRXXVcMCARcOl9XEwhAAFNTVlUCERRDVwxeAgoGPRETUlVBUz0VBEITU0FuRgtdBkFcVAcHC1MFVABQU01ABwxEWlBEPQsAQg5pWlUQWABPQQIMUUdnCFoFX0ZZGkAAClVAalANFAxRERQJEwZAHEEHDwZGbE4ERhBZCw1DWEZWGAEbB0xXQ01JFFZcXQhZPAAJC1RaX0MOGBIAAhUDOxVTRkZfDQhDCkcGEUweQFUbEwoKQFZKPkIGQhcKDgxGWRQNGwVMVE8BUgUAABBOEgsCCR9bQ2cXURFDDQwPQF5BAxoMGFpIUABcBgQTHkBZDRMTEW1aVgdbQQofQQUHAgJDWEEUWESFiMjQpbYahZ7jh9v2GxMVQQZQBFGE7%2bmD6rrSvoqL%2bdLY26XWtJeEg%2FZBSkdbXl0SFllrRofZz4L1sRzSmOKC3KNMFh4RAFEEVoTo7tW6tIe%2F39n70Inc94azkdOF90RNEoGOntek5RiEzeaBj6ARQRlD1vT%2Fhunzhb2I3KnRjt%2bjgLOW14H3Ek9Bgt2f1a7mHISe5Ifc8U1DGxTSiOyD3b%2bMop3WqfoST0GD25zbhc7S6IyN%2FNJCSUPQooXS3%2FWImukWAQEDUhI%2bHkpHW11LFVUPXDsHABsXQQwEGRQJEwhURwwREx5AXAIQEjpTUEwIQgZvAAIYEUZZBRgXWgMVFW8QRVZVbQZRGhBEXwMfGg1bAFEIPBULCQYUDgQDVlVTAFEPBAgeQF8QPAQMRhECVwBPEgsQPhQBEUVdWlhAXEMGSwcRHRASUxACAABtRV0TRwpfCkFbQEZPFERcVT0QBEIWX1xfEFgSWk1XSwAdAFIMUxJIQREQCwdDV0FpFAMTQwxZXRMIQAVNVUhUHAQIUg1BHEYQCAwDD1NrQlkQAj5ZC1BcEwgZEhAKCAJeVmcWWxFUOwUOEAkCQhYPFFNETRIWX11WXgdvFAwUAW1ATABAFkNGWVAfSEFFW1NCPQ8PVgoUCRMDUgFSU1ZVAwMIUQVTAFRTQ05GEFlSQWkSCRFFFWlQXlwEWQRBXB4QW1ESQAxCHTwNCxcXFA5uTUAHAkQMWV1uRgtdBkFcVAcHCVYHUAVRVE1AAQ1CRkxpCwJDCkcHAwECVwJBT0QMXEBMAFgPbxcMBxYTAkRRFwxAV1EAVQYRHRAQVQAMCwhTXVw%2bRgZDEQ8VQF5BBQQFBlJETRIXU1BeXw9VDQc5FUBcXBRXFxJeQSlAGT4aFlxFPRMRVxdXV1QQWABPQQgKRmxIE1sOQBBBW1JIQUVcWkE9EghdABQJAAdWAVRRX1wHBEVNFhZeDQwPPQ0HFA4XFE5EFEMARGxSVwxEBhE5Bl1dXghTQQofQRATOwdTQFBVFjkCXwtQWlYQWEtBEhc6VlZMBFcXbxQMERcUPFVYWkUHOQJfEFhHEwhSHEESFzpWVkwEVxdvFAwRFxQ8VVhaRQc5FVkIUxELAk4SEhI5AVdHXQJAPEALExQSOwBZQVtCQFxRHEdHQm5WB0QGABI6QlxIFEQ8RA0OBEBeU0sYF0MRAxNvCVlUWFw9UwwNAAxVEQIaFhZDARE%2bDgsEWUFBaRYPDFVHDAIEBlECU1BVUAtORU0WFkUNB0NYRlpwBgQAV1NTBSQFdQEFUQRUUiMkd3YKI3BQclcgICBVQRoWQlMAFQhEAGlQXlwEWQRBXB4QVE0ERxBvCAoSFjsVU0ZGXw0IQwpHFB8TXA1CDgIKOl5aSxVrFVUWEAgNCkEMFgcGU15QAVQEAwAQH01p</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_data</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">update.pinyin.2345.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/cloud_config_new.php</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
